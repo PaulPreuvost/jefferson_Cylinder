@@ -24,7 +24,7 @@ class main:
         self.row = 0
         self.column = 0
 
-    def view(self):
+    def view_Console(self):
         # Affichage console du cylindre
         system("clear")
         print("Start")
@@ -49,7 +49,22 @@ class main:
                 output.write('\n')
         print("Écriture Fichier..... OK !")
 
+    def read_dictionnaire_TXT (self):
+        # Lit le fichier input.txt et crée un dictionnaire
+        dictionnaire = {}
+        with open('TXT/input.txt', 'r') as f:
+            lines = f.readlines()
+            for i, line in enumerate(lines):
+                # Supprime les caractères en trop
+                line = line.strip()
+                # Ajoute la ligne dans le dictionnaire avec la clé correspondante (index 1 à 26)
+                dictionnaire[i+1] = line
+        print("Enregistrement Dictionnaire..... OK !")
+        return dictionnaire
+
 Launch = main()
-Launch.view()
+Launch.view_Console()
 Launch.read_TXT()
 Launch.write_TXT()
+dictionnaire = Launch.read_dictionnaire_TXT()
+print(dictionnaire[1])
