@@ -1,0 +1,83 @@
+Launch = main()
+
+# Générer une permutation aléatoire
+permutation = Launch.generate_permutation(26)
+
+# Vérifier si la permutation est valide
+Launch.verif_permutation([1, 2, 3, 4, 5])
+Launch.verif_permutation(list(range(1, 27)))
+
+# Chiffrer et déchiffrer une lettre
+Launch.encrypt_letter('A', permutation)
+Launch.decrypt_letter('A', permutation)
+
+# Afficher la grille de chiffrement dans la console
+Launch.view_console()
+
+# Écrire la grille de chiffrement dans un fichier texte
+Launch.write_TXT()
+
+# Lire la grille de chiffrement à partir du fichier texte
+dictionnaire = Launch.read_dictionnaire_TXT()
+print(dictionnaire[1])
+
+# Chiffrer et déchiffrer un texte
+cylinders = [permutation] * 3  # 3 cylindres identiques pour l'exemple
+key = list(range(1, 27))  # clé valide pour l'exemple
+ciphertext = Launch.encrypt_text('HELLO WORLD', cylinders, key)
+plaintext = Launch.decrypt_text(ciphertext, cylinders, key)
+print(ciphertext)
+print(plaintext)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Utilisation de la classe Enigma
+Launch = main()
+
+# Générer une permutation aléatoire
+permutation = Launch.generate_permutation(26)
+
+# Vérifier si la permutation est valide
+print(Launch.verif_permutation([1, 2, 3, 4, 5]))  # False
+print(Launch.verif_permutation(list(range(1, 27))))  # True
+
+# Chiffrer et déchiffrer une lettre
+print(Launch.encrypt_letter('A', permutation))  # Exemple de sortie : 'U'
+print(Launch.decrypt_letter('U', permutation))  # Exemple de sortie : 'A'
+
+# Afficher la grille de chiffrement dans la console
+Launch.view_console()
+
+# Écrire la grille de chiffrement dans un fichier texte
+Launch.write_TXT()
+
+cylinders = [permutation] * 3 # 3 cylindres identiques pour l'exemple
+key = list(range(1, 27)) # clé valide pour l'exemple
+ciphertext = Launch.encrypt_text('HELLO WORLD', cylinders, key)
+plaintext = Launch.decrypt_text(ciphertext, cylinders, key)
+print(ciphertext) # Exemple de sortie : 'UJNYAOWUJMY'
+print(plaintext) # Exemple de sortie : 'HELLOWORLD'
+
+dictionnaire = Launch.read_dictionnaire_TXT()
+print(dictionnaire[1])
