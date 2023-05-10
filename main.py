@@ -141,7 +141,6 @@ class main:
         # Retourne la lettre déchiffrée
         return letter
 
-# Utilisation de la classe Enigma
 Launch = main()
 
 key = [3, 1, 4, 2, 5]
