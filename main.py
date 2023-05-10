@@ -26,7 +26,10 @@ class main:
 
     def view_Console(self):
         # Affichage console du cylindre
-        system("clear")
+            #La prochaine ligne permet de "clear" le terminal:
+                #Windows (NT): system("cls")
+                #Mac OS/Linux (UNIX): system("cls")
+        system("cls")
         print("Start")
         for self.row in range(self.__number_Of_Disk):
             for self.column in range(self.__length_Alphabet):
