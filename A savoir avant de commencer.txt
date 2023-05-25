@@ -1,0 +1,4 @@
+Si vous souhaitez avoir un fichier txt précis de vos cylindes. Il faut modifier le code. 
+Dans les paramètres de l'objet JeffersonCylinder changer la zone txt/nomFichier.txt
+par le chemin d'accès de votre fichier (vous pouvez transposez votre fichier directement dans le dossier txt pour plus de facilité). 
+De plus, il faut penser à enlever l'appel de la fonction write_TXT, supprimez là ou mettez là en paramètres.
